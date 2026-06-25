@@ -37,7 +37,7 @@ body {
   display: flex; align-items: center; gap: 15px;
   color: #fff; font-weight: 700; font-size: 1.3rem;
 }
-.logo i { color: var(--green-bright); font-size: 1.5rem; }
+.logo i { color: var(--green-bright); font-size: 2.5rem; }
 
 .nav-menu {
   list-style: none;
