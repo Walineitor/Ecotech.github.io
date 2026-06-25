@@ -262,12 +262,15 @@ body {
     flex-wrap: nowrap;
     gap: 10px;
   }
-  .logo {
-    font-size: 1rem;
-    flex-shrink: 0;
+  .logo i {
+    font-size: 1.35rem !important;
+    padding: 0.3rem;
   }
-  .logo span { display: inline !important; }   /* ← muestra "EcoTech Web" */
-  .logo i { font-size: 1.2rem; }
+  .logo span {
+    font-size: 1rem !important;
+    display: inline !important;
+  }
+}
 
   .nav-menu {
     gap: 14px;
