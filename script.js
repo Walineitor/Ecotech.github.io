@@ -77,3 +77,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+/* ===== HOJAS DE OTOÑO CAYENDO ===== */
+(function () {
+  const container = document.createElement('div');
+  container.id = 'leaves-container';
+  document.body.appendChild(container);
+
+  const leaves = ['🍂', '🍁', '🍃'];
+
+  function spawnLeaf() {
+    const leaf = document.createElement('span');
+    leaf.className = 'leaf';
+    leaf.textContent = leaves[Math.floor(Math.random() * leaves.length)];
+    leaf.style.left = Math.random() * 100 + 'vw';
+    leaf.style.fontSize = (1.2 + Math.random() * 1.8) + 'rem';
+    const duration = 6 + Math.random() * 6;
+    leaf.style.animationDuration = duration + 's';
+    leaf.style.setProperty('--drift', (Math.random() * 300 - 150) + 'px');
+    container.appendChild(leaf);
+    setTimeout(() => leaf.remove(), duration * 1000);
+  }
+
+  setInterval(spawnLeaf, 600);
+  for (let i = 0; i < 6; i++) setTimeout(spawnLeaf, i * 200);
+})();
+
+/* ===== MODAL DE FELICITACIONES ===== */
+function mostrarFelicitaciones(nombre = '') {
+  // Confeti
+  const colores = ['#ff6b6b', '#ffd93d', '#6bcB77', '#4d96ff', '#b66bff', '#ff9f43'];
+  for (let i = 0; i < 80; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.style.left = Math.random() * 100 + 'vw';
+    c.style.background = colores[Math.floor(Math.random() * colores.length)];
+    c.style.animationDelay = Math.random() * 1.5 + 's';
+    c.style.transform = `rotate(${Math.random() * 360}deg)`;
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4500);
+  }
+
+  const overlay = document.createElement('div');
+  overlay.className = 'congrats-overlay';
+  overlay.innerHTML = `
+    <div class="congrats-box">
+      <span class="emoji">🌍</span>
+      <h1>¡Felicitaciones${nombre ? ', ' + nombre : ''}!</h1>
+      <p>Tu registro fue exitoso ✨</p>
+      <p><strong>Gracias por ayudar a construir un mundo mejor 🌱💚</strong></p>
+      <p>Cada residuo reciclado cuenta. ¡Sigamos cuidando el planeta!</p>
+      <button class="congrats-close">¡Genial!</button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  const close = () => overlay.remove();
+  overlay.querySelector('.congrats-close').addEventListener('click', close);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+}
