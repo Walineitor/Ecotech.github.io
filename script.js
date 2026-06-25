@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectedLabel = document.getElementById('selectedType');
   const usernameInput = document.getElementById('username');
   const registerBtn = document.getElementById('registerBtn');
+  const nombre = document.getElementById('nombre').value.trim();
+// ... validación y contadores ...
+
 
   let selectedType = null;
 
