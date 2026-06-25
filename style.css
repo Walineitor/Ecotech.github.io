@@ -263,7 +263,7 @@ body {
     gap: 13px;
   }
   .logo {
-    font-size: 1rem;
+    font-size: 2rem;
     flex-shrink: 0;
   }
   .logo span { display: inline !important; }   /* ← muestra "EcoTech Web" */
