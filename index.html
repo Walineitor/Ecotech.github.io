@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoTech Web - Reciclaje de residuos tecnológicos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fa-solid fa-leaf"></i>
+        <span>EcoTech Web</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#punto">Punto EcoTech</a></li>
+        <li><a href="#impacto">Impacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>
+        Reciclar es salvar <br />el futuro
+        <i class="fa-solid fa-seedling hero-icon"></i>
+      </h1>
+      <p>
+        EcoTech Web promueve el reciclaje de residuos tecnológicos para cuidar el
+        planeta y crear conciencia ambiental.
+      </p>
+      <a href="#punto" class="btn-primary">
+        <i class="fa-solid fa-leaf"></i> Comenzar
+      </a>
+    </div>
+  </header>
+
+  <!-- QUIENES SOMOS -->
+  <section id="nosotros" class="about-wrapper">
+    <div class="about-card">
+      <div class="about-left">
+        <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=600&q=80" alt="Manos sosteniendo planeta verde" />
+      </div>
+      <div class="about-center">
+        <h2>
+          <i class="fa-solid fa-people-group"></i> ¿Quiénes somos?
+        </h2>
+        <p>
+          Somos un grupo de jóvenes comprometidos con el medio ambiente.
+          Creamos EcoTech Web para facilitar el reciclaje de residuos
+          electrónicos.
+        </p>
+        <div class="values">
+          <div class="value">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <span>Compromiso</span>
+          </div>
+          <div class="value">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Educación</span>
+          </div>
+          <div class="value">
+            <i class="fa-solid fa-recycle"></i>
+            <span>Sostenibilidad</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Jóvenes reciclando" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PUNTO ECOTECH -->
+  <section id="punto" class="punto">
+    <h2 class="section-title">Punto EcoTech</h2>
+    <p class="section-subtitle">Selecciona el tipo de residuo</p>
+
+    <div class="cards">
+      <div class="card card-green" data-type="Pilas">
+        <div class="card-icon"><i class="fa-solid fa-car-battery"></i></div>
+       <img src="pilas.jpg" alt="Pilas reciclables" />
+        <div class="card-body">
+          <h3>Pilas</h3>
+          <p>Contienen metales pesados que contaminan el suelo y el agua.</p>
+        </div>
+      </div>
+
+      <div class="card card-blue" data-type="Cables">
+        <div class="card-icon"><i class="fa-solid fa-plug"></i></div>
+        <img src="cables.jpg" alt="cables de cobre" />
+        <div class="card-body">
+          <h3>Cables</h3>
+          <p>Los cables pueden reutilizarse y sus materiales recuperarse.</p>
+        </div>
+      </div>
+
+      <div class="card card-purple" data-type="Accesorios">
+        <div class="card-icon"><i class="fa-solid fa-headphones"></i></div>
+        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=500&q=80" alt="Accesorios" />
+        <div class="card-body">
+          <h3>Accesorios</h3>
+          <p>Auriculares, cargadores y más pueden tener una segunda vida.</p>
+        </div>
+      </div>
+
+      <div class="card card-orange" data-type="Dispositivos">
+        <div class="card-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <img src="https://images.unsplash.com/photo-1512054502232-10a0a035d672?auto=format&fit=crop&w=500&q=80" alt="Dispositivos" />
+        <div class="card-body">
+          <h3>Dispositivos</h3>
+          <p>Dales un destino seguro y responsable para reutilizarlos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-wrapper">
+      <div class="form-row">
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="username" placeholder="Nombre del usuario" />
+        </div>
+        <button id="registerBtn" class="btn-primary">Registrar</button>
+      </div>
+      <p class="selected-info">Seleccionado: <span id="selectedType">Ninguno</span></p>
+    </div>
+  </section>
+
+  <!-- IMPACTO -->
+  <section id="impacto" class="impacto">
+    <div class="impacto-card">
+      <h2 class="section-title">Impacto ambiental</h2>
+      <div class="counters">
+        <div class="counter">
+          <i class="fa-solid fa-recycle"></i>
+          <span class="num" id="count-total">0</span>
+          <p>Total reciclado</p>
+        </div>
+        <div class="counter">
+          <i class="fa-solid fa-car-battery"></i>
+          <span class="num" id="count-Pilas">0</span>
+          <p>Pilas</p>
+        </div>
+        <div class="counter">
+          <i class="fa-solid fa-plug"></i>
+          <span class="num" id="count-Cables">0</span>
+          <p>Cables</p>
+        </div>
+        <div class="counter">
+          <i class="fa-solid fa-headphones"></i>
+          <span class="num" id="count-Accesorios">0</span>
+          <p>Accesorios</p>
+        </div>
+        <div class="counter">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span class="num" id="count-Dispositivos">0</span>
+          <p>Dispositivos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 EcoTech Web — Reciclaje para un futuro sostenible 🌱</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
