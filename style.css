@@ -39,9 +39,6 @@ body {
 }
 .logo i { color: var(--green-bright); font-size: 1.5rem; }
 
-}
-
-
 .nav-menu {
   list-style: none;
   display: flex; gap: 36px;
@@ -428,59 +425,4 @@ body {
 }
 @keyframes confettiFall {
   to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
-}
-/* ===== NAVBAR COMPACTO + MENÚ HORIZONTAL ===== */
-.navbar {
-  padding: 0.6rem 1.5rem !important;   /* antes era muy alto */
-  min-height: auto !important;
-}
-.navbar .container,
-.navbar > div {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  align-items: center !important;
-}
-
-.logo {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-}
-.logo i { font-size: 1.6rem !important; padding: 0.3rem !important; }
-.logo span { font-size: 1.25rem !important; }
-
-/* Menú horizontal sin viñetas */
-.nav-menu,
-.nav-menu ul {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 1.75rem !important;
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-.nav-menu li {
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-.nav-menu li::marker { content: "" !important; }
-.nav-menu a {
-  white-space: nowrap;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-/* Móvil: sigue horizontal pero más compacto */
-@media (max-width: 640px) {
-  .navbar { padding: 0.5rem 0.9rem !important; }
-  .logo i { font-size: 1.35rem !important; }
-  .logo span { font-size: 1rem !important; display: inline !important; }
-  .nav-menu, .nav-menu ul {
-    gap: 0.9rem !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto;
-  }
-  .nav-menu a { font-size: 0.85rem; }
 }
