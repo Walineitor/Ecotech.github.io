@@ -267,7 +267,7 @@ body {
     flex-shrink: 0;
   }
   .logo span { display: inline !important; }   /* ← muestra "EcoTech Web" */
-  .logo i { font-size: 2.2rem; }
+  .logo i { font-size: 2.1rem; }
 
   .nav-menu {
     gap: 14px;
