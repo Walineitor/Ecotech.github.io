@@ -257,12 +257,37 @@ body {
   .counters { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
-  .nav-container { padding: 14px 18px; }
-  .nav-menu { gap: 18px; font-size: .9rem; }
-  .logo span { display: none; }
+  .nav-container {
+    padding: 12px 16px;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .logo {
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .logo span { display: inline !important; }   /* ← muestra "EcoTech Web" */
+  .logo i { font-size: 1.2rem; }
+
+  .nav-menu {
+    gap: 14px;
+    font-size: .8rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;            /* si no cabe, scroll horizontal en vez de tapar el logo */
+    scrollbar-width: none;
+  }
+  .nav-menu::-webkit-scrollbar { display: none; }
+  .nav-menu a { white-space: nowrap; }
+
   .cards { grid-template-columns: 1fr; }
   .counters { grid-template-columns: 1fr 1fr; }
   .form-row { flex-direction: column; }
   .btn-primary { justify-content: center; }
   .hero { padding: 110px 6% 60px; }
+}
+
+/* Pantallas muy pequeñas: acorta los labels para que entren con el logo */
+@media (max-width: 420px) {
+  .nav-menu { gap: 10px; font-size: .75rem; }
+  .logo { font-size: .95rem; }
 }
